@@ -12,7 +12,10 @@ const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({
+  origin: "https://voluble-strudel-a85af8.netlify.app",
+  credentials: true,
+}));
 
 app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/auth", authRoutes);
