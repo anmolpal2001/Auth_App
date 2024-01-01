@@ -17,6 +17,11 @@ app.use(cors({
   credentials: true,
 }));
 
+app.use((req, res, next) => {
+  res.setHeader("Content-Type", "application/json");
+  next();
+});
+
 app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/auth", authRoutes);
 
