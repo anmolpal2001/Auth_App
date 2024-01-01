@@ -11,7 +11,6 @@ import AuthLayout from './components/AuthLayout'
 import ForgotPassword from './pages/ForgotPassword'
 import OtpDetails from './pages/OtpDetails'
 import ResetPassword from './pages/ResetPassword'
-import SecureLayout from './components/SecureLayout'
 import { Outlet } from 'react-router-dom';
 
 const router = createBrowserRouter([
