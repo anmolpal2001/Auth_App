@@ -17,7 +17,7 @@ import {
   deleteUserFailure,
   deleteUserStart,
   deleteUserSuccess,
-} from "../redux/User/userSlice.js";
+} from "../redux/user/userSlice.js";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 
