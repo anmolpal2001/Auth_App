@@ -23,7 +23,7 @@ const SignIn = () => {
     e.preventDefault();
     try {
       dispatch(signInStart());
-      const response = await fetch("/api/v1/auth/signin", {
+      const response = await fetch("https://auth-app-server-tuhe.onrender.com/api/v1/auth/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
