@@ -24,7 +24,7 @@ const OtpDetails = () => {
             dispatch(verifyOtpStart());
 
             
-            const response = await fetch(`https://auth-app-server-tuhe.onrender.com/api/v1/auth/verifyOtp/${currentData.user_id}/${currentData.token}`, {
+            const response = await fetch(`/api/v1/auth/verifyOtp/${currentData.user_id}/${currentData.token}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

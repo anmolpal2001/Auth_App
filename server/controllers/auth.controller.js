@@ -242,9 +242,9 @@ const resetPassword = async (req, res, next) => {
     
     if(!id || !token) return next(customError(401,'Invalid Request'));
     if(!mongoose.Types.ObjectId.isValid(id)) return next(customError(401,'Invalid Id'));
-    const cookie_token = req.cookies.reset_pass_token;
-    if(token !== cookie_token) return next(customError(401,'Invalid URL'));
-    const decoded = jwt.verify(cookie_token, process.env.JWT_SECRET);
+    const cookieToken = req.cookies.reset_pass_token;
+    if(token !== cookieToken) return next(customError(401,'Invalid URL'));
+    const decoded = jwt.verify(cookieToken, process.env.JWT_SECRET);
     if(id !== decoded.id) return next(customError(401,'Invalid URL'));
     if(password !== confirmPassword) return next(customError(401,'Passwords do not match'));
     console.log(decoded);

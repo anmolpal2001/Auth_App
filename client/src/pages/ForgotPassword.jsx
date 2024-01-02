@@ -23,7 +23,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     try {
       dispatch(getOtpStart());
-      const response = await fetch("https://auth-app-server-tuhe.onrender.com/api/v1/auth/getOtp", {
+      const response = await fetch(`${BASE_URL}/api/v1/auth/getOtp`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

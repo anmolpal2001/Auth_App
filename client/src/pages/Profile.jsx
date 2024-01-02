@@ -71,7 +71,7 @@ const Profile = () => {
     try {
       dispatch(updateUserStart());
       const response = await fetch(
-        `https://auth-app-server-tuhe.onrender.com/api/v1/user/update/${currentUser.rest._id}`,
+        `${BASE_URL}/api/v1/user/update/${currentUser.rest._id}`,
         {
           method: "POST",
           headers: {

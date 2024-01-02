@@ -23,7 +23,7 @@ const SignUp = () => {
     try {
       setLoading(true);
       setError(false);
-      const response = await fetch("https://auth-app-server-tuhe.onrender.com/api/v1/auth/signup", {
+      const response = await fetch(`${BASE_URL}/api/v1/auth/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

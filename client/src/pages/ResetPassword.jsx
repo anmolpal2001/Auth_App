@@ -18,7 +18,7 @@ const ResetPassword = () => {
         e.preventDefault();
         try{
             dispatch(resetPasswordStart());
-            const response = await fetch(`https://auth-app-server-tuhe.onrender.com/api/v1/auth/resetPassword/${currentData.user_id}/${currentData.resetPassToken}`, {
+            const response = await fetch(`/api/v1/auth/resetPassword/${currentData.user_id}/${currentData.resetPassToken}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
